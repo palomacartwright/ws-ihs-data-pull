@@ -1,0 +1,43 @@
+---
+title: "IHS Shipping Data Pull"
+author: "Paloma Cartwright"
+date: "04/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(janitor)
+library(tidyverse)
+library(here)
+```
+
+
+# Reading in the Datasets 
+
+```{r, message=FALSE}
+sd1 <- read_csv(here("data", "Ship_Results_999.csv")) %>% clean_names()
+sd2 <- read_csv(here("data", "Ship_Results_1999.csv")) %>% clean_names()
+sd3 <- read_csv(here("data", "Ship_Results_2999.csv")) %>% clean_names()
+sd4 <- read_csv(here("data", "Ship_Results_3999.csv")) %>% clean_names()
+sd5 <- read_csv(here("data", "Ship_Results_4999.csv")) %>% clean_names()
+sd6 <- read_csv(here("data", "Ship_Results_5999.csv")) %>% clean_names()
+sd7 <- read_csv(here("data", "Ship_Results_6999.csv")) %>% clean_names()
+sd8 <- read_csv(here("data", "Ship_Results_7999.csv")) %>% clean_names()
+sd9 <- read_csv(here("data", "Ship_Results_8999.csv")) %>% clean_names()
+sd10 <- read_csv(here("data", "Ship_Results_9999.csv")) %>% clean_names()
+sd11 <- read_csv(here("data", "Ship_Results_10999.csv")) %>% clean_names()
+sd12 <- read_csv(here("data", "Ship_Results_11999.csv")) %>% clean_names()
+sd13 <- read_csv(here("data", "Ship_Results_12999.csv")) %>% clean_names()
+sd14 <- read_csv(here("data", "Ship_Results_14999.csv")) %>% clean_names()
+
+```
+
+# Bind the datasets 
+
+```{r}
+
+complete_ship_results_2021 <- rbind(sd1, sd2, sd3, sd4, sd5, sd6, sd7, sd8, sd9, sd10, sd11, sd12, sd13, sd14 )
+```
+
+
