@@ -38,6 +38,8 @@ sd14 <- read_csv(here("data", "Ship_Results_14999.csv")) %>% clean_names()
 ```{r}
 
 complete_ship_results_2021 <- rbind(sd1, sd2, sd3, sd4, sd5, sd6, sd7, sd8, sd9, sd10, sd11, sd12, sd13, sd14 )
+
+write.csv(complete_ship_results_2021, "ship_results_2021.csv")
 ```
 
 
